@@ -1,4 +1,9 @@
-body .app-container h1 {
-  color: red;
+html {
+  margin: 0em;
+}
+
+html body .menu ul {
+  margin: 1em;
+  list-style: none;
 }
 /*# sourceMappingURL=style.css.map */
