@@ -34,7 +34,7 @@ html, body {
         }
 }
 statusbar {
-    width: 100vw;
+    width: 100%;
     
     display: grid;
     align-items: center;
@@ -95,14 +95,15 @@ statusbar {
 }
             
 .menu {
-    width: max-content;
-    height: 100vh;
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     margin: 3rem 0;
     
     .menu-item {
-    width: max-content;
+    display: inline-block;
     color: $txtColor;
     background: linear-gradient(to left, #FCFDFE 50%, rgba(55,161,255,.2) 50% );
     background-size: 200% 100%;
@@ -139,8 +140,9 @@ statusbar {
     right: 0;
     border-radius: 50px;
     width: max-content;
-    padding: 1.0rem;
-    margin: 1.0rem;
+    max-width: 100px;
+    padding: 1.5rem;
+    margin: 2rem;
     background-color: $accColor2;
     
     a {
