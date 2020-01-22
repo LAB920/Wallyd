@@ -1,30 +1,30 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,300,400,700|Roboto+Condensed:300,400,700|Roboto:100,400,500,700&display=swap");
 :root {
   background-color: #FCFDFE;
   margin: 0;
-  font-size: 16px;
-  font-family: sans-serif;
+  font-size: 62.5%;
 }
 
 html, body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
 }
 
 html a, body a {
   text-decoration: none;
-  margin: 6.0rem 0rem;
   font-size: medium;
   color: #37A1FB;
 }
 
-html .fixedbutton, body .fixedbutton {
-  position: fixed;
-  padding: 1.0rem;
-  width: 2%;
-  height: auto;
+html h1, body h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  letter-spacing: 50;
 }
 
-html navbar, body navbar {
+statusbar {
   width: 100vw;
   display: -ms-grid;
   display: grid;
@@ -39,18 +39,18 @@ html navbar, body navbar {
   background-color: #133E62;
 }
 
-html navbar .logo, body navbar .logo {
+statusbar .logo {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: logo;
-  margin: .5rem;
+  margin: 1rem 2rem;
 }
 
-html navbar .logo img, body navbar .logo img {
-  width: 4.0rem;
+statusbar .logo img {
+  width: 50px;
 }
 
-html navbar .profile, body navbar .profile {
+statusbar .profile {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: profile;
@@ -60,7 +60,6 @@ html navbar .profile, body navbar .profile {
   -ms-grid-column-align: end;
       justify-self: end;
   height: 100%;
-  font-weight: bold;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto;
@@ -68,23 +67,25 @@ html navbar .profile, body navbar .profile {
   -ms-grid-columns: auto;
       grid-template-columns: auto;
       grid-template-areas: "image info";
-  padding-left: .5rem;
-  padding-right: .5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   background-color: #ED7353;
   color: white;
 }
 
-html navbar .profile img, body navbar .profile img {
+statusbar .profile img {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: image;
   border-radius: 50%;
-  padding-left: .5rem;
-  padding-right: .5rem;
-  width: 4.0rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 5rem;
 }
 
-html navbar .profile .info, body navbar .profile .info {
+statusbar .profile .info {
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: calc(50em / 1000);
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: info;
@@ -97,7 +98,15 @@ html navbar .profile .info, body navbar .profile .info {
           flex-direction: column;
 }
 
-html .menu, body .menu {
+statusbar .profile .info .user {
+  font-weight: 700;
+}
+
+statusbar .profile .info .company {
+  font-weight: 300;
+}
+
+.menu {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -109,10 +118,10 @@ html .menu, body .menu {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 1rem 0;
+  margin: 3rem 0;
 }
 
-html .menu .menu-item, body .menu .menu-item {
+.menu .menu-item {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -123,16 +132,17 @@ html .menu .menu-item, body .menu .menu-item {
   background-position: right bottom;
   -webkit-transition: all ease .3s;
   transition: all ease .3s;
-  padding: 1rem;
+  padding: 1.5rem;
   margin: .5rem 0;
+  font-weight: 500;
 }
 
-html .menu .menu-item.active, body .menu .menu-item.active {
+.menu .menu-item.active {
   color: #37A1FB;
   cursor: default;
 }
 
-html .menu .menu-item:hover:not(.active), body .menu .menu-item:hover:not(.active) {
+.menu .menu-item:hover:not(.active) {
   background-position: left bottom;
   color: #37A1FB;
   border-top-right-radius: 50px;
@@ -140,7 +150,28 @@ html .menu .menu-item:hover:not(.active), body .menu .menu-item:hover:not(.activ
   padding-right: 4rem;
 }
 
-html .menu .menu-item i, body .menu .menu-item i {
-  margin-right: 1rem;
+.menu .menu-item i {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.fixedbutton {
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-radius: 50px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1.0rem;
+  margin: 1.0rem;
+  background-color: #F1A632;
+}
+
+.fixedbutton a {
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: calc(50em / 1000);
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
