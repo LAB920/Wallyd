@@ -1,14 +1,115 @@
-$color1:grey;
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-html {
-    margin: 0em;
-    body {
-        .menu{
-         ul{
-                margin: 1em;
-                list-style: none;
-                color; grey;
-          }
-      }
+:root {
+    background-color: #FCFDFE;
+    margin: 0;
+    font-size: 16px;
+    font-family: sans-serif;
+
+}
+
+html, body {
+        margin: 0;
+    
+        a {
+            text-decoration: none;
+            margin: 6.0rem 0rem;
+            font-size: medium;
+            color: #37A1FB;
+        }
+
+        .fixedbutton {
+            position: fixed;
+            padding: 1.0rem;
+            width: 2%;
+            height: auto;
+        } 
+
+    navbar {
+        width: 100vw;
+        
+        display: grid;
+        align-items: center;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-template-areas: "logo profile";
+        
+        background-color: #133E62;
+        
+        .logo {
+        grid-area: logo;
+        margin: .5rem;
+            img {
+                width: 4.0rem;
+            } 
+        }
+        
+        .profile {
+        grid-area: profile;
+        align-items: center;
+        justify-self: end;
+        height: 100%;
+        font-weight: bold;
+        
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-template-areas: "image info";
+        
+        padding-left: .5rem;
+        padding-right: .5rem;
+        background-color: #ED7353;
+        color: white;
+        
+            img {
+                grid-area: image;
+                border-radius: 50%;
+                padding-left: .5rem;
+                padding-right: .5rem;
+                width: 4.0rem;
+            }
+            
+            .info {
+                grid-area: info;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+                
+    .menu {
+        width: max-content;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0;
+        
+        .menu-item {
+        width: max-content;
+        color: #727375;
+        background: linear-gradient(to left, #FCFDFE 50%, rgba(55,161,255,.2) 50% );
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all ease .3s;
+        padding: 1rem;
+        margin: .5rem 0;
+        
+            &.active {
+                color: #37A1FB;
+                cursor: default;
+            }
+            
+            &:hover:not(.active) {
+                background-position: left bottom;
+                color: #37A1FB;
+                border-top-right-radius: 50px;
+                border-bottom-right-radius: 50px;
+                padding-right: 4rem;
+            }
+            
+            i {
+                margin-right: 1rem;
+            }  
+        }         
     }
 }
