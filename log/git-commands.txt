@@ -1,3 +1,9 @@
+// Overwrite local files with GIT
+1. git fetch --all
+2. git reset --hard origin/master
+3. git pull
+
+// Toevoegen
 1. git add *
 2. git status
 3. git commit -m "je verandering"
