@@ -18,7 +18,7 @@ html, body {
   font-size: 1.6rem;
 }
 
-html button:focus, body button:focus {
+html button:focus, html input:focus, body button:focus, body input:focus {
   outline: 0;
 }
 
@@ -44,5 +44,30 @@ html button, body button {
   /* show a hand cursor on hover; some argue that we
             should keep the default arrow cursor for buttons */
   cursor: pointer;
+}
+
+form {
+  text-align: center;
+}
+
+form .input-group input, form .input-group button {
+  text-align: center;
+  padding: .5rem;
+  margin: .75rem;
+  border-radius: 5px;
+}
+
+form .input-group button {
+  background-image: -webkit-gradient(linear, left top, right top, from(#00a1ff), to(#00e1ff));
+  background-image: linear-gradient(to right, #00a1ff, #00e1ff);
+  cursor: pointer;
+  border: 0;
+  width: 50%;
+  color: white;
+}
+
+form .input-group input {
+  border: 1px solid #D5D5D5;
+  font-weight: 300;
 }
 /*# sourceMappingURL=forms.css.map */

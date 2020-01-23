@@ -29,7 +29,7 @@ html, body {
         font-family: 'Roboto', sans-serif;
         font-size: 1.6rem;
 
-        button:focus {
+        button:focus, input:focus {
             outline:0;
         }
     

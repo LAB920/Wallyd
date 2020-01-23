@@ -18,7 +18,7 @@ html, body {
   font-size: 1.6rem;
 }
 
-html button:focus, body button:focus {
+html button:focus, html input:focus, body button:focus, body input:focus {
   outline: 0;
 }
 

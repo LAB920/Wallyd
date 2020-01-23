@@ -1,5 +1,27 @@
 @import "settings/settings";
 
 form {
-    
+    text-align: center;
+    .input-group {
+
+        input, button {
+            text-align: center;
+            padding: .5rem;
+            margin: .75rem;
+            border-radius: 5px;
+        }
+
+        button {
+            background-image: linear-gradient(to right, #00a1ff, #00e1ff);
+            cursor: pointer;
+            border: 0;
+            width: 50%;
+            color: white;
+        }
+
+        input {
+            border: 1px solid $borderColor;
+            font-weight: 300;
+        }
+    }
 }
