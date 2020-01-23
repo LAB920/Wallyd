@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,300,400,700|Roboto+Condensed:300,400,700|Roboto:100,400,500,700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  background-color: #FCFDFE;
+  margin: 0;
+  font-size: 62.5%;
+}
+
+html, body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+}
+
+html button:focus, body button:focus {
+  outline: 0;
+}
+
+html a, body a {
+  text-decoration: none;
+  font-size: medium;
+  color: #37A1FB;
+}
+
+html h1, body h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  letter-spacing: 50;
+}
+
+html button, body button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* show a hand cursor on hover; some argue that we
+            should keep the default arrow cursor for buttons */
+  cursor: pointer;
+}
+/*# sourceMappingURL=forms.css.map */

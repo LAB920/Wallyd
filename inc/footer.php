@@ -1,3 +1,6 @@
+<!-- Close app wrapper -->
+</div>
+
 <!-- Fixed button -->
 <div class="fixedbutton">
     <a href="">Hulp nodig?</a>

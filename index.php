@@ -19,7 +19,5 @@
     <main class="app-container">
         
     </main>
-
-    </body>
-
-</html>
+    
+<?php include('inc/footer.php') ?>

@@ -10,49 +10,53 @@
     <title><?= $title . $title_tag ?></title>
 </head>
 <body>  
-    <!-- Status bar -->
-    <header>
-        <!-- Logo -->
-        <div class="logo">
-            <img src="img/logo-white.png" alt="logo">
-        </div>
 
-        <!-- Show profile container when logged in-->
-        <?php if (isset($_SESSION['username'])) : ?>
-            <div class="profile" id="my-profile">
-                <!-- Avatar -->
-                <div class="avatar">
-                    <img src="img/undraw_profile_pic_ic5t.png" alt="avatar">
-                </div>
+    <!-- Wrapper -->
+    <div class="app-wrapper">
 
-                <!-- Profile information -->
-                <div class="info">
-                    <span class="user"><?= $_SESSION['username'] ?></span>
-                    <span class="company"><?= $_SESSION['company'] ?></span>
-                </div>
+        <!-- Status bar -->
+        <header>
+            <!-- Logo -->
+            <div class="logo">
+                <img src="img/logo-white.png" alt="logo">
             </div>
-        <?php endif ?>
-    </header>
-        
-    <!-- Menu -->
-    <nav id="menu-bar">
-        <!-- Hamburger icon -->
-        <div id="hamburger-container" class="header-item">
-            <button id="hamburger-button" class="hamburger hamburger--squeeze" type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
-        </div>
 
-        <!-- Menu items -->
-        <div class="menu-list" id="menu-list">
-            <?php
-                foreach ($menu_items as $item) {
-                    echo "<a href=" . str_replace(' ', '', strtolower($item[0])) . " class=\"menu-item\">";
-                    echo '<i class="' . $item[1] . '"></i>';
-                    echo $item[0] . '</a>';
-                }
-            ?>
-        </div>
-    </nav>
+            <!-- Show profile container when logged in-->
+            <?php if (isset($_SESSION['username'])) : ?>
+                <div class="profile" id="my-profile">
+                    <!-- Avatar -->
+                    <div class="avatar">
+                        <img src="img/undraw_profile_pic_ic5t.png" alt="avatar">
+                    </div>
+
+                    <!-- Profile information -->
+                    <div class="info">
+                        <span class="user"><?= $_SESSION['username'] ?></span>
+                        <span class="company"><?= $_SESSION['company'] ?></span>
+                    </div>
+                </div>
+            <?php endif ?>
+        </header>
+            
+        <!-- Menu -->
+        <nav id="menu-bar">
+            <!-- Hamburger icon -->
+            <div id="hamburger-container" class="header-item">
+                <button id="hamburger-button" class="hamburger hamburger--squeeze" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+
+            <!-- Menu items -->
+            <div class="menu-list" id="menu-list">
+                <?php
+                    foreach ($menu_items as $item) {
+                        echo "<a href=" . str_replace(' ', '', strtolower($item[0])) . " class=\"menu-item\">";
+                        echo '<i class="' . $item[1] . '"></i>';
+                        echo $item[0] . '</a>';
+                    }
+                ?>
+            </div>
+        </nav>
