@@ -1,39 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,300,400,700|Roboto+Condensed:300,400,700|Roboto:100,400,500,700&display=swap');
+@import "settings/settings";
+@import "hamburgers/hamburgers";
 
-$bgColor1: #FCFDFE;
-
-$accColor1: #37A1FB;
-$accColor2: #F1A632;
-$accColor4: #ED7353;
-$accColor8: #133E62;
-
-$txtColor: #727375;
-
-:root {
-    background-color: $bgColor1;
-    margin: 0;
-    font-size: 62.5%;
+body {
+    display: grid;
+    width: 100vw;
+    min-height: 100vh;
+    height: 100vh;
+    grid-template-columns: auto;
+    grid-template-rows: 100px auto;
+    grid-template-areas:    "header"
+                            "nav"
+                            "main";
+    color: $txtColor;
 }
 
-html, body {
-        margin: 0;
-        font-family: 'Roboto', sans-serif;
-        font-size: 1.6rem;
-    
-        a {
-            text-decoration: none;
-            font-size: medium;
-            color: $accColor1;
-        }
-
-        h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 3.6rem;
-            font-weight: 700;
-            letter-spacing: 50;
-        }
-}
-statusbar {
+header {
+    grid-area: header;
     width: 100%;
     
     display: grid;
@@ -46,42 +28,49 @@ statusbar {
     
     .logo {
     grid-area: logo;
-    margin: 1rem 2rem;
+    margin: 2rem;
         img {
             width: 50px;
         } 
     }
     
     .profile {
-    grid-area: profile;
-    align-items: center;
-    justify-self: end;
-    height: 100%;
-    
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: auto;
-    grid-template-areas: "image info";
-    
-    padding-left: 2rem;
-    padding-right: 2rem;
-    background-color: $accColor4;
-    color: white;
-    
-        img {
-            grid-area: image;
-            border-radius: 50%;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            width: 5rem;
-        }
+        grid-area: profile;
+        align-items: center;
+        justify-self: end;
+        height: 100%;
+        min-width: 30%;
         
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-template-areas:    "image"
+                                "info";
+        
+        padding-left: 3rem;
+        padding-right: 3rem;
+        background-color: $accColor4;
+        color: white;
+
+        border-left: 1px solid $bgColor1;
+    
+        .avatar {
+            grid-area: image;
+            justify-self: center;
+
+            img {
+                border-radius: 50%;
+                width: 50px;
+            }
+        }
+
         .info {
             font-family: 'Roboto Condensed', sans-serif;
             letter-spacing: calc(50em / 1000);
             grid-area: info;
             display: flex;
             flex-direction: column;
+            text-align: center;
 
             .user {
                 font-weight: 700;
@@ -91,56 +80,72 @@ statusbar {
                 font-weight: 300;
             }
         }
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgb(231, 87, 50); 
+        }
     }
 }
             
-.menu {
+nav {
+    grid-area: nav;
+
     width: 100%;
-    max-width: 200px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 3rem 0;
-    
-    .menu-item {
-    display: inline-block;
-    color: $txtColor;
-    background: linear-gradient(to left, #FCFDFE 50%, rgba(55,161,255,.2) 50% );
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: all ease .3s;
-    padding: 1.5rem;
-    margin: .5rem 0;
-    font-weight: 500;
-    
-        &.active {
-            color: $accColor1;
-            cursor: default;
+    height: 50px;
+    background-color: white;
+    transition: height .5s;
+    z-index: 99;
+    border-bottom: 1px solid $borderColor;
+
+    &.open {
+        height: 100% !important;
+        animation-name: reveal;
+        animation-duration: 0.7s;
+        opacity: 1;
+    }
+
+    #hamburger-container {
+        text-align: center;
+        line-height: 50px;
+    }
+
+    .menu-list {
+        visibility: hidden;
+        text-align: center;
+        z-index: 100;
+
+        .menu-item {
+            display: block;
+            color: $txtColor2;
+            padding: 1.5rem;
+            margin: .5rem 0;
+            font-weight: 500;
+            z-index: 101;
+            
+            &.active {
+                color: $accColor1;
+                cursor: default;
+            }
+            
+            i {
+                margin-right: 2rem;
+            }  
         }
-        
-        &:hover:not(.active) {
-            background-position: left bottom;
-            color: $accColor1;
-            border-top-right-radius: 50px;
-            border-bottom-right-radius: 50px;
-            padding-right: 4rem;
+
+        &.open {
+            visibility: visible;
+            height: 100%;
         }
-        
-        i {
-            margin-left: 2rem;
-            margin-right: 2rem;
-        }  
-    }         
-}
+    }
+}         
 
 .fixedbutton {
-    z-index: 1;
+    z-index: 99999;
     position: fixed;
     bottom: 0;
     right: 0;
     border-radius: 50px;
-    width: max-content;
-    max-width: 100px;
     padding: 1.5rem;
     margin: 2rem;
     background-color: $accColor2;
@@ -151,3 +156,9 @@ statusbar {
         color: white;
     }
 } 
+
+main {
+    grid-area: main;
+    align-self: center;
+    justify-self: left;
+}
