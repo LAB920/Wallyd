@@ -4,33 +4,39 @@
     include('inc/header.php');
     include('registration/server_registration.php');  
 ?>
-    <main class="app-container">
+    <main class="app-container login-container">
+        <!-- Background image -->
+        <div class="bg-image-container">
+            <img src="img/welcoming.png" class="bg-image" alt="Login">
+        </div>    
+
+        <!-- Logo -->
+        <div class="logo">
+            <img src="img/logo-blue.png" alt="">
+        </div>
+        
         <form method="post" action="registreer.php">
             <?php include('inc/errors.php'); ?>
             
             <div class="input-group">
-                <label>Gebruikersnaam</label>
-                <input type="text" name="username" value="<?php echo $username; ?>">
+                <input placeholder="Gebruikersnaam" type="text" name="username" value="<?php echo $username; ?>">
             </div>
             
             <div class="input-group">
-                <label>E-mailadres</label>
-                <input type="email" name="email" value="<?php echo $email; ?>">
+                <input placeholder="E-mailadres" type="email" name="email" value="<?php echo $email; ?>">
             </div>
 
             <div class="input-group">
-                <label>Bedrijfsnaam</label>
-                <input type="text" name="company" value="<?php echo $company; ?>">
+                <input placeholder="Bedrijfsnaam"
+                 type="text" name="company" value="<?php echo $company; ?>">
             </div>
             
             <div class="input-group">
-                <label>Wachtwoord</label>
-                <input type="password" name="password_1">
+                <input placeholder="Wachtwoord" type="password" name="password_1">
             </div>
             
             <div class="input-group">
-                <label>Herhaal wachtwoord</label>
-                <input type="password" name="password_2">
+                <input placeholder="Herhaal wachtwoord" type="password" name="password_2">
             </div>
             
             <div class="input-group">
