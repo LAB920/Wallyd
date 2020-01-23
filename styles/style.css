@@ -36,6 +36,17 @@ html h1, body h1 {
   letter-spacing: 50;
 }
 
+html button, body button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* show a hand cursor on hover; some argue that we
+            should keep the default arrow cursor for buttons */
+  cursor: pointer;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -70,6 +81,17 @@ html h1, body h1 {
   font-size: 3.6rem;
   font-weight: 700;
   letter-spacing: 50;
+}
+
+html button, body button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* show a hand cursor on hover; some argue that we
+            should keep the default arrow cursor for buttons */
+  cursor: pointer;
 }
 
 /*!
@@ -862,14 +884,14 @@ html h1, body h1 {
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
 }
 
 .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
   opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
 }
 
 .hamburger--minus.is-active .hamburger-inner::before {
@@ -969,8 +991,8 @@ html h1, body h1 {
 }
 
 .hamburger--spin .hamburger-inner::before {
-  -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+  -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
 }
 
 .hamburger--spin .hamburger-inner::after {
@@ -992,8 +1014,8 @@ html h1, body h1 {
 .hamburger--spin.is-active .hamburger-inner::before {
   top: 0;
   opacity: 0;
-  -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+  -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
 }
 
 .hamburger--spin.is-active .hamburger-inner::after {
@@ -1017,8 +1039,8 @@ html h1, body h1 {
 }
 
 .hamburger--spin-r .hamburger-inner::before {
-  -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+  -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
 }
 
 .hamburger--spin-r .hamburger-inner::after {
@@ -1040,8 +1062,8 @@ html h1, body h1 {
 .hamburger--spin-r.is-active .hamburger-inner::before {
   top: 0;
   opacity: 0;
-  -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+  -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
 }
 
 .hamburger--spin-r.is-active .hamburger-inner::after {
@@ -1277,8 +1299,8 @@ html h1, body h1 {
 }
 
 .hamburger--squeeze .hamburger-inner::before {
-  -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-  transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+  -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+  transition: top 0.075s 0.12s ease, opacity 0.075s ease;
 }
 
 .hamburger--squeeze .hamburger-inner::after {
@@ -1300,8 +1322,8 @@ html h1, body h1 {
 .hamburger--squeeze.is-active .hamburger-inner::before {
   top: 0;
   opacity: 0;
-  -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-  transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+  -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+  transition: top 0.075s ease, opacity 0.075s 0.12s ease;
 }
 
 .hamburger--squeeze.is-active .hamburger-inner::after {
@@ -1432,7 +1454,7 @@ body {
       grid-template-columns: auto;
   -ms-grid-rows: 100px auto;
       grid-template-rows: 100px auto;
-      grid-template-areas: "header" "nav" "main";
+      grid-template-areas: "header" "nav" "main";
   color: #222;
 }
 
@@ -1482,7 +1504,7 @@ header .profile {
       grid-template-rows: auto;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
-      grid-template-areas: "image" "info";
+      grid-template-areas: "image" "info";
   padding-left: 3rem;
   padding-right: 3rem;
   background-color: #ED7353;
@@ -1614,5 +1636,26 @@ main {
       align-self: center;
   -ms-grid-column-align: left;
       justify-self: left;
+}
+
+main form {
+  text-align: center;
+}
+
+main form .input-group input, main form .input-group button {
+  border: 0;
+  text-align: center;
+  padding: .5rem;
+  margin: .75rem;
+  border-radius: 5px;
+}
+
+main form .input-group button {
+  background-image: -webkit-gradient(linear, left top, right top, from(#00a1ff), to(#00e1ff));
+  background-image: linear-gradient(to right, #00a1ff, #00e1ff);
+  cursor: pointer;
+  border: 0;
+  width: 50%;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
