@@ -155,8 +155,8 @@ nav {
 } 
 
 main {
-    align-self: center;
-    justify-self: left;
-
-    
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
 }
