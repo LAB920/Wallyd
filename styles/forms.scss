@@ -3,29 +3,33 @@
 form {
     text-align: center;
     .input-group {
-
         input, button {
             text-align: center;
-            padding: .5rem;
-            margin: .75rem;
+            padding: .75rem;
+            margin: 1rem;
             border-radius: 5px;
         }
 
         button {
-            background-image: linear-gradient(to right, #00a1ff, #00e1ff);
+            background-size: 200%;
+            background-image: linear-gradient(to right, #00A0FF 0%, #1fe3fd 51%, #00A0FF 100%) !important;
+            transition: .5s ease-in-out;
+            padding: 1rem;
             cursor: pointer;
             border: 0;
             width: 50%;
             color: white;
+
+            &:hover {
+                background-position: right center !important;
+            }
         }
 
         input {
             border: 1px solid $borderColor;
             font-weight: 300;
             font-size: 1.6rem;
-        }
-        p {
-            margin: 1rem 0;
+            width: 100%;
         }
     }
 }

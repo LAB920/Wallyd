@@ -1,10 +1,13 @@
 <!-- Close app wrapper -->
 </div>
 
-<!-- Fixed button -->
-<div class="fixedbutton">
-    <a href="">Hulp nodig?</a>
-</div>
+<!-- Show when logged in-->
+<?php if (isset($_SESSION['username'])) : ?>
+    <!-- Fixed button -->
+    <div class="fixedbutton">
+        <a href="">Hulp nodig?</a>
+    </div>
+<?php endif ?>
 
 <script
 src="https://code.jquery.com/jquery-3.4.1.js"

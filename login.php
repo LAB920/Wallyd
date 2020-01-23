@@ -5,14 +5,17 @@
     include('registration/server_registration.php');
 ?>
     <main class="app-container login-container">
-        <img src="img/welcoming.png" class="bg-image" alt="Login">
+        <!-- Background image -->
+        <div class="bg-image-container">
+            <img src="img/welcoming.png" class="bg-image" alt="Login">
+        </div>    
 
+        <!-- Logo -->
+        <div class="logo">
+            <img src="img/logo-blue.png" alt="">
+        </div>
+        
         <form method="post" action="login.php">
-
-            <!-- Logo -->
-            <div class="logo">
-                <img src="img/logo-blue.png" alt="">
-            </div>
 
             <?php include('inc/errors.php'); ?>
             
@@ -27,11 +30,11 @@
             <div class="input-group">
                 <button type="submit" class="btn" name="login_user">Inloggen</button>
             </div>
-
-            <p class="forgot-password">Wachtwoord vergeten? <a href="#"></a></p>
-            
-            <p class="form-help">Nog geen lid? <a href="registreer.php">Meld je nu aan!</a></p>
         </form>
+
+        <!-- Forget password and create account -->
+        <p class="forgot-password"><a href="#">Wachtwoord vergeten?</a></p>
+        <p class="form-help">Nog geen lid? <a href="registreer.php">Meld je nu aan!</a></p>
     </main>
 
 <!-- Include footer -->

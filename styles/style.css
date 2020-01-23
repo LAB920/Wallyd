@@ -101,28 +101,33 @@ form {
 
 form .input-group input, form .input-group button {
   text-align: center;
-  padding: .5rem;
-  margin: .75rem;
+  padding: .75rem;
+  margin: 1rem;
   border-radius: 5px;
 }
 
 form .input-group button {
-  background-image: -webkit-gradient(linear, left top, right top, from(#00a1ff), to(#00e1ff));
-  background-image: linear-gradient(to right, #00a1ff, #00e1ff);
+  background-size: 200%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#00A0FF), color-stop(51%, #1fe3fd), to(#00A0FF)) !important;
+  background-image: linear-gradient(to right, #00A0FF 0%, #1fe3fd 51%, #00A0FF 100%) !important;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  padding: 1rem;
   cursor: pointer;
   border: 0;
   width: 50%;
   color: white;
 }
 
+form .input-group button:hover {
+  background-position: right center !important;
+}
+
 form .input-group input {
   border: 1px solid #D5D5D5;
   font-weight: 300;
   font-size: 1.6rem;
-}
-
-form .input-group p {
-  margin: 1rem 0;
+  width: 100%;
 }
 
 * {
@@ -1725,21 +1730,74 @@ main {
   max-height: 100vh;
 }
 
-.login-container .logo img {
-  width: 50px;
-  margin-bottom: 4rem;
+.login-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.login-container .bg-image {
-  opacity: .4;
-  max-width: 100%;
+.login-container .logo {
+  text-align: center;
+}
+
+.login-container .logo img {
+  width: 20%;
+}
+
+.login-container .bg-image-container {
   position: absolute;
   z-index: -1;
+  max-width: 100%;
+  overflow: hidden;
+  left: 0;
+  bottom: 0;
+}
+
+.login-container .bg-image-container img {
+  opacity: .4;
+  width: 60%;
+  left: 0;
+  bottom: 0;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  overflow: hidden;
-  bottom: 0;
-  -webkit-transform: scale(1.9);
-          transform: scale(1.9);
+}
+
+@media only screen and (max-width: 768px) {
+  .login-container .bg-image-container img {
+    width: 140%;
+    margin-left: -100px;
+  }
+}
+
+.login-container form {
+  width: 30%;
+  margin: 10% 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .login-container form {
+    width: 70%;
+  }
+}
+
+.login-container a, .login-container p {
+  font-size: 1.4rem;
+}
+
+.login-container a.forgot-password, .login-container p.forgot-password {
+  margin-bottom: 1rem;
+}
+
+.login-container p {
+  color: #727375;
+}
+
+.login-container a {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */

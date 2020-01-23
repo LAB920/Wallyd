@@ -14,15 +14,17 @@
     <!-- Wrapper -->
     <div class="app-wrapper">
 
+        <!-- Show profile container when logged in-->
+        <?php if (isset($_SESSION['username'])) : ?>
+
         <!-- Status bar -->
         <header>
+        
             <!-- Logo -->
             <div class="logo">
                 <img src="img/logo-white.png" alt="logo">
             </div>
 
-            <!-- Show profile container when logged in-->
-            <?php if (isset($_SESSION['username'])) : ?>
                 <div class="profile" id="my-profile">
                     <!-- Avatar -->
                     <div class="avatar">
@@ -35,7 +37,6 @@
                         <span class="company"><?= $_SESSION['company'] ?></span>
                     </div>
                 </div>
-            <?php endif ?>
         </header>
             
         <!-- Menu -->
@@ -60,3 +61,5 @@
                 ?>
             </div>
         </nav>
+        
+        <?php endif ?>
