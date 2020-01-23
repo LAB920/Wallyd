@@ -118,6 +118,11 @@ form .input-group button {
 form .input-group input {
   border: 1px solid #D5D5D5;
   font-weight: 300;
+  font-size: 1.6rem;
+}
+
+form .input-group p {
+  margin: 1rem 0;
 }
 
 * {

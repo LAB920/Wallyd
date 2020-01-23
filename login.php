@@ -19,8 +19,10 @@
             <div class="input-group">
                 <button type="submit" class="btn" name="login_user">Inloggen</button>
             </div>
+
+            <p class="forgot-password">Wachtwoord vergeten? <a href="#"></a></p>
             
-            <p class="form-help">Nog geen account? <a href="registreer.php">Registreer</a></p>
+            <p class="form-help">Nog geen lid? <a href="registreer.php">Meld je nu aan!</a></p>
         </form>
     </main>
 
