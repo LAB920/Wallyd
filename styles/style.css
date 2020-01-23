@@ -121,6 +121,10 @@ form .input-group input {
   font-size: 1.6rem;
 }
 
+form .input-group p {
+  margin: 1rem 0;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1717,5 +1721,25 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.login-container .logo img {
+  width: 50px;
+  margin-bottom: 4rem;
+}
+
+.login-container .bg-image {
+  opacity: .4;
+  max-width: 100%;
+  position: absolute;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  bottom: 0;
+  -webkit-transform: scale(1.9);
+          transform: scale(1.9);
 }
 /*# sourceMappingURL=style.css.map */

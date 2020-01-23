@@ -71,4 +71,8 @@ form .input-group input {
   font-weight: 300;
   font-size: 1.6rem;
 }
+
+form .input-group p {
+  margin: 1rem 0;
+}
 /*# sourceMappingURL=forms.css.map */
