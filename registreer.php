@@ -7,7 +7,7 @@
     <main class="app-container login-container">
         <!-- Background image -->
         <div class="bg-image-container">
-            <img src="img/welcoming.png" class="bg-image" alt="Login">
+            <img src="img/undraw_walk_in_the_city_1ma6.png" class="bg-image" alt="Login">
         </div>    
 
         <!-- Logo -->
@@ -15,6 +15,8 @@
             <img src="img/logo-blue.png" alt="">
         </div>
         
+        <h1>Registreer account</h1>
+
         <form method="post" action="registreer.php">
             <?php include('inc/errors.php'); ?>
             

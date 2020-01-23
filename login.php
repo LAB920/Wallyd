@@ -14,6 +14,8 @@
         <div class="logo">
             <img src="img/logo-blue.png" alt="">
         </div>
+
+        <h1>Login</h1>
         
         <form method="post" action="login.php">
 
