@@ -5,7 +5,7 @@
     include('registration/server_registration.php');
 ?>
     <main class="app-container">
-        <form method="post" action="login.php">
+        <form method="post" class="login-form" action="login.php">
             <?php include('inc/errors.php'); ?>
             
             <div class="input-group">
