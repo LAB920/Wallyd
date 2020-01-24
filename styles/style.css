@@ -1771,6 +1771,17 @@ main.hide {
           animation-duration: .7s;
 }
 
+main .chart {
+  width: 100%;
+  min-height: 250px;
+}
+
+@media only screen and (min-width: 768px) {
+  main .chart.square {
+    max-width: 300px;
+  }
+}
+
 .login-container {
   display: -webkit-box;
   display: -ms-flexbox;

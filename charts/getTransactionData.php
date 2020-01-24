@@ -3,15 +3,22 @@
 
     include('../inc/config.php');
 
+    $period = 7;
+
+    // Get params from Ajax
+    if(isset($_POST['period'])) {
+        $period = json_decode($_POST['period'], true);
+    }
+
     // connect to the database
     $db = mysqli_connect($db_config['DB_HOST'], $db_config['DB_USERNAME'], $db_config['DB_PASSWORD'], $db_config['DB_DATABASE']);
     
     //Prepare insert statement
     $query = 
     "SELECT `weekday`, COUNT(`id`) AS 'amount' 
-    FROM `gettransactiondates`";
-    
-    $query .= " WHERE `date` >= NOW() + INTERVAL -7 DAY AND `date` <  NOW() + INTERVAL  0 DAY ";
+    FROM `vw_transactions_weekdays`";
+
+    $query .= " WHERE `date` >= NOW() + INTERVAL -$period DAY AND `date` <  NOW() + INTERVAL  0 DAY ";
 
     $query .=
     "GROUP BY `weekday` 
