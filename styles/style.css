@@ -216,7 +216,7 @@ html button, body button {
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-  background-color: #727375;
+  background-color: #FFF;
 }
 
 .hamburger-box {
@@ -235,7 +235,7 @@ html button, body button {
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   width: 25px;
   height: 4px;
-  background-color: #727375;
+  background-color: #FFF;
   border-radius: 4px;
   position: absolute;
   -webkit-transition-property: -webkit-transform;
@@ -1741,6 +1741,26 @@ main {
   -webkit-animation-duration: .7s;
           animation-duration: .7s;
   padding: 10%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .date-picker {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+main select {
+  cursor: pointer;
+  text-decoration: underline;
+  border: none;
+  color: #37A1FB;
+}
+
+main select:focus {
+  outline: none;
 }
 
 main.hide {

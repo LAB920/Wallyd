@@ -1,10 +1,14 @@
 // Load the Visualization API and the piechart package.
-google.charts.load('current', {'packages':['line']});
+google.charts.load('current', {'packages':['corechart']});
       
 // Set a callback to run when the Google Visualization API is loaded.
 google.charts.setOnLoadCallback(drawChart);
   
 function drawChart() {
+  var cssClassNames = {
+      
+  }
+
   var jsonData = $.ajax({
       url: "charts/getTransactionData.php",
       dataType: "json",
@@ -16,23 +20,27 @@ function drawChart() {
 
   // Set chart options
     var options = {
-        width: 600,
-        height: 300,
+        width: 300,
+        height: 250,
+        titleTextStyle: {
+            fontSize: 14,
+            bold: true,
+        },
+        title: 'Aantal transacties per dag',
+            subtitle: 'van de afgelopen 7 dagen',
+        fontName: "Roboto",
+        fontSize: 14,
+        bold: false,
+        colors:['#37A1FB'],
         legend: {
             position: 'none'
         },
-        series: {
-            1: { 
-                pointShape: 'circle',
+        series: { //Create 2 separate series to fake what you want. One for the line             and one for the points
+            0: {
+                lineWidth: 3,
                 lineDashStyle: [4, 4],
-                lineWidth: 4,
-                pointSize: 30,
-            },
-        },
-        chart: {
-            title: 'Aantal transacties per dag',
-            subtitle: 'van de afgelopen 7 dagen',
-            curveType: 'function',
+                pointSize: 10
+            }
         },
         animation:{
             duration: 1000,
@@ -71,6 +79,6 @@ function drawChart() {
     };
 
   // Instantiate and draw our chart, passing in some options.
-  var chart = new google.charts.Line(document.getElementById('pie-chart-div'));
-  chart.draw(data, google.charts.Line.convertOptions(options));
+  var chart = new google.visualization.AreaChart(document.getElementById('pie-chart-div'));
+  chart.draw(data, options);
 }

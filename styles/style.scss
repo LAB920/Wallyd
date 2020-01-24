@@ -170,6 +170,22 @@ main {
     animation-name: reveal-back;
     animation-duration: .7s;
     padding: 10%;
+    flex-direction: column;
+
+    .date-picker {
+        align-self: flex-end;
+    }
+
+    select {
+        cursor: pointer;
+        text-decoration: underline;
+        border: none;
+        color: $accColor1;
+
+        &:focus {
+            outline: none;
+        }
+    }
 
     &.hide {
         display: none;
