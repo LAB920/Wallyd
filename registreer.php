@@ -15,7 +15,7 @@
             <img src="img/logo-blue.png" alt="">
         </div>
         
-        <h1>Registreer account</h1>
+        <h1 class="form-title">Registreer account</h1>
 
         <form method="post" action="registreer.php">
             <?php include('inc/errors.php'); ?>
@@ -44,9 +44,10 @@
             <div class="input-group">
                 <button type="submit" class="btn" name="reg_user">Registreer</button>
             </div>
-            
-            <p>Al een account? <a href="login.php">Log in</a></p>
         </form>
+
+        <!-- Forget password and create account -->
+        <p>Al een account? <a href="login.php">Log in</a></p>
     </main>
 
 <!-- Include footer -->

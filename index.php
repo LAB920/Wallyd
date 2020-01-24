@@ -17,7 +17,7 @@
 ?>
 
     <main class="app-container">
-        
+        <div id="pie-chart-div" style="width: 100%; height: auto"></div>
     </main>
     
 <?php include('inc/footer.php') ?>

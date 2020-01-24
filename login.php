@@ -15,7 +15,7 @@
             <img src="img/logo-blue.png" alt="">
         </div>
 
-        <h1>Login</h1>
+        <h1 class="form-title">Inloggen</h1>
         
         <form method="post" action="login.php">
 
